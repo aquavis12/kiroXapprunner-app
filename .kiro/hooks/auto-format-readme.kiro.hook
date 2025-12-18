@@ -1,0 +1,34 @@
+{
+  "enabled": true,
+  "name": "Auto Format & README Update",
+  "description": "Automatically formats code files when saved and updates the README.md file to reflect any changes",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "*.js",
+      "*.ts",
+      "*.py",
+      "*.java",
+      "*.cpp",
+      "*.c",
+      "*.go",
+      "*.rs",
+      "*.php",
+      "*.rb",
+      "*.swift",
+      "*.kt",
+      "*.cs",
+      "*.html",
+      "*.css",
+      "*.json",
+      "*.xml",
+      "*.yaml",
+      "*.yml"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A code file has been saved. Please:\n1. Format the saved file according to best practices and language conventions\n2. Update the README.md file to reflect any new features, changes, or important information about the codebase\n3. Ensure the README.md accurately describes the current state of the project\n\nFocus on maintaining code quality and keeping documentation current."
+  }
+}
